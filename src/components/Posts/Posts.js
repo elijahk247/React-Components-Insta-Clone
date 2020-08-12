@@ -4,7 +4,7 @@ import './Posts.css';
 
 const Posts = (props) => {
   // 🔥 Make sure the parent of Posts is passing the right props!
-  const { likePost, posts } = props;
+  const { likePosts, posts, likePost } = props;
 
   return (
     <div className='posts-container-wrapper'>
@@ -14,7 +14,7 @@ const Posts = (props) => {
           return <Post
             key={posting.id}
             post={posting}
-            likePost={posting.likes}
+            likePost={likePost}
           />
         })
       }
